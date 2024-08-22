@@ -1,0 +1,57 @@
+:root {
+    --DodgerBlue: #1e90ff;
+    --Violet: #ee82ee;
+    --MediumSeaGreen: #3cb371;
+    --SlateBlue: #6a5acd;
+  }
+
+body {
+    /* background-color: LightGray; */
+}
+  
+/* Style for the buttons with checkboxes */
+.checkbox-button {
+    display: inline-block;
+    position: relative;
+    padding: 11px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    width: 239px;
+}
+
+/* Colors for the buttons */
+.checkbox-button.red { background-color: Violet; }
+.checkbox-button.blue { background-color: DodgerBlue; }
+.checkbox-button.green { background-color: MediumSeaGreen; }
+.checkbox-button.yellow { background-color: SlateBlue; }
+.checkbox-button.pink { background-color: Pink; }
+
+/* Style the checkbox */
+.checkbox-button input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Style the label text */
+.checkbox-button label {
+    font-weight: bold;
+    color: white;
+    font-size: 16px;
+}
+
+/* Change text color only when checkbox is checked */
+.checkbox-button input[type="checkbox"]:checked + label {
+    color: black; /* Text color turns black */
+}
+
+
+/* Google Map */
+#map {
+    height: 500px;
+    width: 100%;
+  }

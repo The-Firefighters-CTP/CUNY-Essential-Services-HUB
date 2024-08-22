@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>CUNY Essential Services Map</title>
+</head>
+<body>
+    <heading>
+        <!-- <h1>CUNY Essential Services HUB</h1> -->
+        <img title="CUNY Essential Services HUB" src="./image/CUNY Essential Services HUB in color.png" width="1480" height="190">
+    </heading>
+
+    <main>
+        <section id="service options">
+            <!-- Healthcare Services button with checkbox -->
+            <div class="checkbox-button blue">
+                <input type="checkbox" id="check2">
+                <label for="check2">HEALTHCARE SERVICES</label>
+            </div>
+
+            <!-- Food Pantry Supplies button with checkbox   / -->
+            <div class="checkbox-button red">
+                <input type="checkbox" id="check1">
+                <label for="check1">FOOD PANTRY SERVICES</label>
+            </div>
+
+            <!-- Mental Health Services button with checkbox -->
+            <div class="checkbox-button green">
+                <input type="checkbox" id="check3">
+                <label for="check3">MENTAL HEALTH SERVICES</label>
+            </div>
+
+            <!-- Childcare Services button with checkbox -->
+            <div class="checkbox-button yellow">
+                <input type="checkbox" id="check4">
+                <label for="check4">CHILDCARE SERVICES</label>
+            </div>
+
+            <!-- SELLECT ALL button with checkbox -->
+            <div class="checkbox-button pink">
+                <input type="checkbox" id="check5">
+                <label for="check5">SELLECT ALL</label>
+            </div>
+        </section>
+
+        <div id="map"></div>
+    </main>
+    <!-- Load the config file first -->
+    <script src="./config.js"></script>
+    <script src="dataset/dataset.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
