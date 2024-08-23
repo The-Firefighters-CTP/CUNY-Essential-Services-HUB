@@ -32,7 +32,7 @@
 .checkbox-button.blue { background-color: var(--DodgerBlue); }
 .checkbox-button.green { background-color: var(--MediumSeaGreen); }
 .checkbox-button.yellow { background-color: var(--SlateBlue); }
-.checkbox-button.pink { background-color: Pink; }
+.checkbox-button.pink { background-color: white; }
 
 /* Style the checkbox */
 .checkbox-button input[type="checkbox"] {

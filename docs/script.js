@@ -32,24 +32,48 @@ script.onload = () => {
     const check1 = document.getElementById('check1');
 
     check1.addEventListener('change', function () {
+        if (check1.checked && check2.checked && check3.checked && check4.checked) {
+            check5.checked = true;
+        }
+        else {
+            check5.checked = false;
+        }
         toggleMarkers(this.checked, FoodPantryFeatures, 'FoodPantry', map);
     });
 
     const check2 = document.getElementById('check2');
 
     check2.addEventListener('change', function () {
+        if (check1.checked && check2.checked && check3.checked && check4.checked) {
+            check5.checked = true;
+        }
+        else {
+            check5.checked = false;
+        }
         toggleMarkers(this.checked, HealthCareFeatures, 'HealthCare', map);
     });
 
     const check3 = document.getElementById('check3');
     
     check3.addEventListener('change', function () {
+        if (check1.checked && check2.checked && check3.checked && check4.checked) {
+            check5.checked = true;
+        }
+        else {
+            check5.checked = false;
+        }
         toggleMarkers(this.checked, MentalHealthFeatures, 'MentalHealth', map);
     });
 
     const check4 = document.getElementById('check4');
     
     check4.addEventListener('change', function () {
+        if (check1.checked && check2.checked && check3.checked && check4.checked) {
+            check5.checked = true;
+        }
+        else {
+            check5.checked = false;
+        }
         toggleMarkers(this.checked, ChildCareFeatures, 'ChildCare', map);
     });
 
@@ -58,36 +82,36 @@ script.onload = () => {
     check5.addEventListener('change', function () {
         // Handle "Select All" separately
         if (this.checked) {
-            initMap(AllFeatures, 'All', map);
-            // initMapAll(check1, check2, check3, check4);
+            // initMap(AllFeatures, 'All', map);
+            initMapAll(check1, check2, check3, check4);
         } else {
-            clearMarkers('All');
-            // clearAll(check1, check2, check3, check4);
+            // clearMarkers('All');
+            clearAll(check1, check2, check3, check4);
         }
     });
 };
 
-// function initMapAll(check1, check2, check3, check4) {
-//     toggleMarkers(true, HealthCareFeatures, 'HealthCare', map);
-//     check1.checked = true;
-//     toggleMarkers(true, FoodPantryFeatures, 'FoodPantry', map);
-//     check2.checked = true;
-//     toggleMarkers(true, MentalHealthFeatures, 'MentalHealth', map);
-//     check3.checked = true;
-//     toggleMarkers(true, ChildCareFeatures, 'ChildCare', map);
-//     check4.checked = true;
-// }
+function initMapAll(check1, check2, check3, check4) {
+    check1.checked = true;
+    check2.checked = true;
+    check3.checked = true;
+    check4.checked = true;
+    initMap(HealthCareFeatures, 'HealthCare', map);
+    initMap(FoodPantryFeaturesFeatures, 'FoodPantry', map);
+    initMap(MentalHealthFeatures, 'MentalHealth', map);
+    initMap(ChildCareFeatures, 'ChildCare', map);
+}
 
-// function clearAll(check1, check2, check3, check4) {
-//     clearMarkers('HealthCare');
-//     check1.checked = false;
-//     clearMarkers('FoodPantry');
-//     check2.checked = false;
-//     clearMarkers('MentalHealth');
-//     check3.checked = false;
-//     clearMarkers('ChildCare');
-//     check4.checked = false;
-// }
+function clearAll(check1, check2, check3, check4) {
+    clearMarkers('HealthCare');
+    check1.checked = false;
+    clearMarkers('FoodPantry');
+    check2.checked = false;
+    clearMarkers('MentalHealth');
+    check3.checked = false;
+    clearMarkers('ChildCare');
+    check4.checked = false;
+}
 
 document.head.appendChild(script);
 
