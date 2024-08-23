@@ -1,11 +1,11 @@
-const FeatureCollection = [
+const HealthCareFeatures = [
     {
     "type": "Feature",
     "geometry": {
-        "type": "Point",
-        "coordinates": [-73.9147, 40.8558]  // Approximate coordinates for Bronx Community College
+        "type": "Point"
     },
     "properties": {
+        "service": "Health Care",
         "name": "Bronx Community College Health Services",
         "address": "Room N-380, 199 Chambers St., Bronx, NY",
         "email": "healthservices@bmcc.cuny.edu",
@@ -19,10 +19,10 @@ const FeatureCollection = [
     {
     "type": "Feature",
     "geometry": {
-        "type": "Point",
-        "coordinates": [-73.9185, 40.8354]  // Approximate coordinates for Hostos Community College
+        "type": "Point"
     },
     "properties": {
+        "service": "Health Care",
         "name": "Hostos Community College Health Services",
         "address": "D-101K, 120 East 149th Street, at Walton Avenue, Bronx, NY",
         "email": "usanders@hostos.cuny.edu",
@@ -37,10 +37,10 @@ const FeatureCollection = [
     {
     "type": "Feature",
     "geometry": {
-        "type": "Point",
-        "coordinates": [-73.8888, 40.8682]  // Approximate coordinates for Lehman College
+        "type": "Point"
     },
     "properties": {
+        "service": "Health Care",
         "name": "Lehman College Health Services",
         "address": "Old Gym, Room B008 (by the library), Bronx, NY",
         "email": "med.requirements@lehman.cuny.edu",
@@ -55,10 +55,10 @@ const FeatureCollection = [
     {
     "type": "Feature",
     "geometry": {
-        "type": "Point",
-        "coordinates": [-73.9613, 40.6503]  // Approximate coordinates for Brooklyn College
+        "type": "Point"
     },
     "properties": {
+        "service": "Health Care",
         "name": "Brooklyn College Health Services",
         "address": "114 Roosevelt Hall, Brooklyn, NY",
         "email": "BCHealthClinic@gmail.com",
@@ -73,10 +73,10 @@ const FeatureCollection = [
     {
     "type": "Feature",
     "geometry": {
-        "type": "Point",
-        "coordinates": [-73.9877, 40.6947]  // Approximate coordinates for City Tech
+        "type": "Point"
     },
     "properties": {
+        "service": "Health Care",
         "name": "City Tech Health Services",
         "address": "300 Jay Street, G-414, Brooklyn, NY",
         "email": "WellnessCenter@citytech.cuny.edu",
@@ -91,10 +91,10 @@ const FeatureCollection = [
     {
     "type": "Feature",
     "geometry": {
-        "type": "Point",
-        "coordinates": [-73.9265, 40.6066]  // Approximate coordinates for Kingsborough Community College
+        "type": "Point"
     },
     "properties": {
+        "service": "Health Care",
         "name": "Kingsborough Community College Health Services",
         "address": "Room D-102, Brooklyn, NY",
         "email": "Health.Center@kbcc.cuny.edu",
@@ -109,10 +109,10 @@ const FeatureCollection = [
     {
     "type": "Feature",
     "geometry": {
-        "type": "Point",
-        "coordinates": [-73.9555, 40.6625]  // Approximate coordinates for Medgar Evers College
+        "type": "Point"
     },
     "properties": {
+        "service": "Health Care",
         "name": "Medgar Evers College Health Services",
         "address": "1637 Bedford Ave, Room S-217, Brooklyn, NY 11225",
         "email": "healthservices@mec.cuny.edu",
@@ -127,10 +127,10 @@ const FeatureCollection = [
     {
     "type": "Feature",
     "geometry": {
-        "type": "Point",
-        "coordinates": [-73.9825, 40.7396]  // Approximate coordinates for Baruch College
+        "type": "Point"
     },
     "properties": {
+        "service": "Health Care",
         "name": "Baruch College Health Services",
         "address": "138 East 26th Street, Main Floor, New York, NY 10010",
         "email": "StudentHealthCareCenter@baruch.cuny.edu",
@@ -145,10 +145,10 @@ const FeatureCollection = [
     {
     "type": "Feature",
     "geometry": {
-        "type": "Point",
-        "coordinates": [-73.9147, 40.8558]  // Approximate coordinates for BMCC
+        "type": "Point"
     },
     "properties": {
+        "service": "Health Care",
         "name": "BMCC Health Services",
         "address": "Room N-380, 199 Chambers St., New York, NY",
         "email": "healthservices@bmcc.cuny.edu",
@@ -163,10 +163,10 @@ const FeatureCollection = [
     {
     "type": "Feature",
     "geometry": {
-        "type": "Point",
-        "coordinates": [-73.9368, 40.8214]  // Approximate coordinates for City College
+        "type": "Point"
     },
     "properties": {
+        "service": "Health Care",
         "name": "City College of New York Health Services",
         "address": "160 Convent Avenue, Marshak Science Building, Room J15, New York, NY 10031",
         "email": "shs@ccny.cuny.edu",
@@ -181,10 +181,10 @@ const FeatureCollection = [
     {
     "type": "Feature",
     "geometry": {
-        "type": "Point",
-        "coordinates": [-73.9834, 40.7549]  // Approximate coordinates for Guttman Community College
+        "type": "Point"
     },
     "properties": {
+        "service": "Health Care",
         "name": "Guttman Community College Health Services",
         "address": "Room 507, 50 West 40th Street, New York, NY 10018",
         "email": "wellness@guttman.cuny.edu",
@@ -199,10 +199,10 @@ const FeatureCollection = [
     {
     "type": "Feature",
     "geometry": {
-        "type": "Point",
-        "coordinates": [-73.9515, 40.8111]  // Approximate coordinates for Graduate School of Public Health
+        "type": "Point"
     },
     "properties": {
+        "service": "Health Care",
         "name": "Graduate School of Public Health Health Services",
         "address": "55 West 125th Street, New York, NY 10027",
         "email": "wellness@gc.cuny.edu",
@@ -217,10 +217,10 @@ const FeatureCollection = [
     {
     "type": "Feature",
     "geometry": {
-        "type": "Point",
-        "coordinates": [-73.9656, 40.7672]  // Approximate coordinates for Hunter College
+        "type": "Point"
     },
     "properties": {
+        "service": "Health Care",
         "name": "Hunter College Health Services",
         "address": "Room 307, North Building, New York, NY",
         "email": "wellness@hunter.cuny.edu, healthandwellness@hunter.cuny.edu",
@@ -235,10 +235,10 @@ const FeatureCollection = [
     {
     "type": "Feature",
     "geometry": {
-        "type": "Point",
-        "coordinates": [-73.9923, 40.7492]  // Approximate coordinates for John Jay College
+        "type": "Point"
     },
     "properties": {
+        "service": "Health Care",
         "name": "John Jay College Health Services",
         "address": "Room L.68.00, 524 West 59th Street, New York, NY 10019",
         "email": "healthoffice@jjay.cuny.edu",
@@ -253,10 +253,10 @@ const FeatureCollection = [
     {
     "type": "Feature",
     "geometry": {
-        "type": "Point",
-        "coordinates": [-73.9217, 40.7625]  // Approximate coordinates for LaGuardia Community College
+        "type": "Point"
     },
     "properties": {
+        "service": "Health Care",
         "name": "LaGuardia Community College Health Services",
         "address": "MB-40, 31-10 Thomson Avenue, Long Island City, NY 11101",
         "email": "Health-Center@lagcc.cuny.edu",
@@ -271,10 +271,10 @@ const FeatureCollection = [
     {
     "type": "Feature",
     "geometry": {
-        "type": "Point",
-        "coordinates": [-73.8188, 40.7361]  // Approximate coordinates for Queens College
+        "type": "Point"
     },
     "properties": {
+        "service": "Health Care",
         "name": "Queens College Health Services",
         "address": "3rd Floor Frese Hall, Flushing, NY",
         "email": "healthquestions@qc.cuny.edu",
@@ -289,10 +289,10 @@ const FeatureCollection = [
     {
     "type": "Feature",
     "geometry": {
-        "type": "Point",
-        "coordinates": [-73.7647, 40.7570]  // Approximate coordinates for Queensborough Community College
+        "type": "Point"
     },
     "properties": {
+        "service": "Health Care",
         "name": "Queensborough Community College Health Services",
         "address": "Medical Arts Building, MC-02, 222-05, 56th Avenue, Bayside, NY 11364",
         "email": "HealthServices@qcc.cuny.edu",
@@ -307,10 +307,10 @@ const FeatureCollection = [
     {
     "type": "Feature",
     "geometry": {
-        "type": "Point",
-        "coordinates": [-73.7970, 40.6884]  // Approximate coordinates for York College
+        "type": "Point"
     },
     "properties": {
+        "service": "Health Care",
         "name": "York College Health Services",
         "address": "AC-1F01, 94-20 Guy R. Brewer Blvd., Jamaica, NY 11451",
         "email": "StudHealthSvcCtr@york.cuny.edu",
@@ -325,10 +325,10 @@ const FeatureCollection = [
     {
     "type": "Feature",
     "geometry": {
-        "type": "Point",
-        "coordinates": [-74.1484, 40.5721]  // Approximate coordinates for College of Staten Island
+        "type": "Point"
     },
     "properties": {
+        "service": "Health Care",
         "name": "College of Staten Island Health Services",
         "address": "Office of Student Life in the Campus Center, 1C-201, Staten Island, NY",
         "email": "healthcenter@csi.cuny.edu",

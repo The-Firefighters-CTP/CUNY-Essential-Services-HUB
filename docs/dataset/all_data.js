@@ -1,4 +1,4 @@
-const FeatureCollection = [
+const AllFeatures = [
     {
       "type": "Feature",
       "geometry": {

@@ -3,63 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/Logo.png" type="image/x-icon">
     <link href="style.css" rel="stylesheet">
-    <!--Poppins Font-->
-    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-    <title>CUNY Essential Services Map</title>
+    <title>Essential Services HUB for CUNY</title>
 </head>
 <body>
-    
-    <header class="header">
-        <div class="header-div">
-            <img id="logo" title="CUNY Essential Services HUB" src="./images/Logo-transparent.png">
-        </div>
-        <div class="header-div">
-            <p id = "Ess">ESSENTIAL</p>
-            <p id = "Ser">SERVICES</p>
-        </div>
-        <div class="header-div">
-            <h1 id= "Hub">HUB</h1>
-        </div>
-    </header>
-    
-    <!--
     <header>
-        <h1>CUNY Essential Services HUB</h1> 
+        <!-- <h1>CUNY Essential Services HUB</h1> -->
         <img title="CUNY Essential Services HUB" src="./images/CUNY Essential Services HUB in color.png" width="1480" height="190">
     </header>
-    -->
 
     <main>
         <section id="service options">
             <!-- Healthcare Services button with checkbox -->
             <div class="checkbox-button blue">
-                <input type="checkbox" id="check2">
+                <input type="checkbox" id="check2" onclick="initMap(HealthCareFeatures)">
                 <label for="check2">HEALTHCARE SERVICES</label>
             </div>
 
             <!-- Food Pantry Supplies button with checkbox   / -->
             <div class="checkbox-button red">
-                <input type="checkbox" id="check1">
+                <input type="checkbox" id="check1" onclick="initMap(FoodPantryFeatures)">
                 <label for="check1">FOOD PANTRY SERVICES</label>
             </div>
 
             <!-- Mental Health Services button with checkbox -->
             <div class="checkbox-button green">
-                <input type="checkbox" id="check3">
+                <input type="checkbox" id="check3" onclick="initMap(MentalHealthFeatures)">
                 <label for="check3">MENTAL HEALTH SERVICES</label>
             </div>
 
             <!-- Childcare Services button with checkbox -->
             <div class="checkbox-button yellow">
-                <input type="checkbox" id="check4">
+                <input type="checkbox" id="check4" onclick="initMap(ChildCareFeatures)">
                 <label for="check4">CHILDCARE SERVICES</label>
             </div>
 
             <!-- SELLECT ALL button with checkbox -->
             <div class="checkbox-button pink">
-                <input type="checkbox" id="check5">
-                <label for="check5">SELLECT ALL</label>
+                <input type="checkbox" id="check5" onclick="initMap(AllFeatures)" checked>
+                <label for="check5">SELECT ALL</label>
             </div>
         </section>
 
@@ -67,7 +50,11 @@
     </main>
     <!-- Load the config file first -->
     <script src="./config.js"></script>
-    <script src="./dataset/dataset.js"></script>
+    <script src="./dataset/all_data.js"></script>
+    <script src="./dataset/healthcare_data.js"></script>
+    <script src="./dataset/food_pantry_data.js"></script>
+    <script src="./dataset/mental_health_data.js"></script>
+    <script src="./dataset/childcare_data.js"></script>
     <script src="./script.js"></script>
 </body>
 </html>
