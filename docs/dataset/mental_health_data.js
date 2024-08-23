@@ -1,11 +1,11 @@
-const FeatureCollection = [
+const MentalHealthFeatures = [
     {
     "type": "Feature",
     "geometry": {
-        "type": "Point",
-        "coordinates": [-73.9853, 40.7396]  // Approximate coordinates for Baruch College
+        "type": "Point"
     },
     "properties": {
+        "service": "Mental Health",
         "name": "Baruch College Counseling Center",
         "address": "137 East 25th Street, 9th Floor, Room 914, New York, NY 10010",
         "phone": "(646) 312-2155",
@@ -23,10 +23,10 @@ const FeatureCollection = [
     {
     "type": "Feature",
     "geometry": {
-        "type": "Point",
-        "coordinates": [-74.0077, 40.7145]  // Approximate coordinates for BMCC
+        "type": "Point"
     },
     "properties": {
+        "service": "Mental Health",
         "name": "BMCC Counseling Center",
         "address": "199 Chambers Street, Room S-343, New York, NY 10007",
         "phone": "(212) 220-8140",
@@ -43,10 +43,10 @@ const FeatureCollection = [
     {
     "type": "Feature",
     "geometry": {
-        "type": "Point",
-        "coordinates": [-73.9122, 40.8554]  // Approximate coordinates for Bronx Community College
+        "type": "Point"
     },
     "properties": {
+        "service": "Mental Health",
         "name": "Bronx Community College Counseling Center",
         "address": "Loew Hall [LO], Room 430, Bronx, NY 10453",
         "phone": "718.289.5223",
@@ -61,10 +61,10 @@ const FeatureCollection = [
     {
     "type": "Feature",
     "geometry": {
-        "type": "Point",
-        "coordinates": [-73.9613, 40.6503]  // Approximate coordinates for Brooklyn College
+        "type": "Point"
     },
     "properties": {
+        "service": "Mental Health",
         "name": "Brooklyn College Counseling Center",
         "address": "2900 Bedford Avenue, 0203 James Hall, Brooklyn, NY 11210",
         "phone": "718.951.5363",
@@ -81,10 +81,10 @@ const FeatureCollection = [
     {
     "type": "Feature",
     "geometry": {
-        "type": "Point",
-        "coordinates": [-73.9368, 40.8214]  // Approximate coordinates for City College
+        "type": "Point"
     },
     "properties": {
+        "service": "Mental Health",
         "name": "City College (CCNY) Counseling Center",
         "address": "Convent Ave at 138th Street, Marshak Science Building Room J15, New York, NY 10031",
         "phone": "212-650-8222",
@@ -101,10 +101,10 @@ const FeatureCollection = [
     {
     "type": "Feature",
     "geometry": {
-        "type": "Point",
-        "coordinates": [-73.9845, 40.7427]  // Approximate coordinates for Graduate Center
+        "type": "Point"
     },
     "properties": {
+        "service": "Mental Health",
         "name": "Graduate Center Counseling Center",
         "address": "365 Fifth Avenue, Rm. 6422, New York, NY 10016",
         "phone": "212-817-7020",
@@ -120,10 +120,10 @@ const FeatureCollection = [
     {
     "type": "Feature",
     "geometry": {
-        "type": "Point",
-        "coordinates": [-73.9225, 40.8316]  // Approximate coordinates for Hostos Community College
+        "type": "Point"
     },
     "properties": {
+        "service": "Mental Health",
         "name": "Hostos Community College Counseling Center",
         "address": "450 Grand Concourse, C-Building, Rm. 330, Bronx, NY 10451",
         "phone": "718-518-4459",
@@ -139,10 +139,10 @@ const FeatureCollection = [
     {
     "type": "Feature",
     "geometry": {
-        "type": "Point",
-        "coordinates": [-73.9656, 40.7672]  // Approximate coordinates for Hunter College
+        "type": "Point"
     },
     "properties": {
+        "service": "Mental Health",
         "name": "Hunter College Counseling Center",
         "address": "Room 1123, East Building, 695 Park Ave, New York, NY 10065",
         "phone": "212-772-4891",
@@ -158,10 +158,10 @@ const FeatureCollection = [
     {
     "type": "Feature",
     "geometry": {
-        "type": "Point",
-        "coordinates": [-73.9923, 40.7492]  // Approximate coordinates for John Jay College
+        "type": "Point"
     },
     "properties": {
+        "service": "Mental Health",
         "name": "John Jay College of Criminal Justice Counseling Center",
         "address": "New Building L.68.00, 524 W. 59th St., New York, NY 10019",
         "phone": "212.237.8111",
@@ -177,10 +177,10 @@ const FeatureCollection = [
     {
     "type": "Feature",
     "geometry": {
-        "type": "Point",
-        "coordinates": [-73.9265, 40.6066]  // Approximate coordinates for Kingsborough Community College
+        "type": "Point"
     },
     "properties": {
+        "service": "Mental Health",
         "name": "Kingsborough Community College Counseling Center",
         "address": "Room D.102, 2001 Oriental Blvd, Brooklyn, NY 11235",
         "phone": "718-368-5975",
@@ -196,10 +196,10 @@ const FeatureCollection = [
     {
     "type": "Feature",
     "geometry": {
-        "type": "Point",
-        "coordinates": [-73.9217, 40.7625]  // Approximate coordinates for LaGuardia Community College
+        "type": "Point"
     },
     "properties": {
+        "service": "Mental Health",
         "name": "LaGuardia Community College Counseling Center",
         "address": "31-10 Thomson Avenue, Long Island City, NY 11101",
         "phone": "718-482-5269",

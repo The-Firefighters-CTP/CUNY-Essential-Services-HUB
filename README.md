@@ -19,7 +19,7 @@ A hub hosting all essential services CUNY offers with 1-click instant access!
 
 ---
 
-### Website:
+### [Website](ttps://the-firefighters-ctp.github.io/CUNY-Essential-Services-HUB/)
 
 ### Demo Video: 
 

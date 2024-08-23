@@ -1,11 +1,11 @@
-const FeatureCollection = [
+const ChildCareFeatures = [
     {
       "type": "Feature",
       "geometry": {
-        "type": "Point",
-        "coordinates": [-73.9825, 40.7396]  // Approximate coordinates for 1 Bernard Baruch Way
+        "type": "Point"
       },
       "properties": {
+        "service": "Child Care",
         "name": "Early Learning Center",
         "address": "Box G-1063, 1 Bernard Baruch Way, New York, NY 10010",
         "phone": "212-387-1420",
@@ -22,10 +22,10 @@ const FeatureCollection = [
     {
       "type": "Feature",
       "geometry": {
-        "type": "Point",
-        "coordinates": [-74.0071, 40.7145]  // Approximate coordinates for 199 Chambers Street
+        "type": "Point"
       },
       "properties": {
+        "service": "Child Care",
         "name": "Borough of Manhattan Community College Early Childhood Center Inc.",
         "address": "Room N375, 199 Chambers Street, New York, NY 10007",
         "phone": "212-220-8250",
@@ -42,10 +42,10 @@ const FeatureCollection = [
     {
       "type": "Feature",
       "geometry": {
-        "type": "Point",
-        "coordinates": [-73.9186, 40.8601]  // Approximate coordinates for 2155 University Avenue
+        "type": "Point"
       },
       "properties": {
+        "service": "Child Care",
         "name": "Child Development Center",
         "address": "2155 University Avenue, Bronx, NY 10453",
         "phone": "718-289-5461",
@@ -66,10 +66,10 @@ const FeatureCollection = [
     {
       "type": "Feature",
       "geometry": {
-        "type": "Point",
-        "coordinates": [-73.9645, 40.6324]  // Approximate coordinates for 1604 James Hall
+        "type": "Point"
       },
       "properties": {
+        "service": "Child Care",
         "name": "The Early Childhood Center Programs",
         "address": "1604 James Hall, Bedford Avenue & Avenue H, Brooklyn, NY 11210",
         "phone": "718-951-5431",
@@ -86,10 +86,10 @@ const FeatureCollection = [
     {
       "type": "Feature",
       "geometry": {
-        "type": "Point",
-        "coordinates": [-74.1580, 40.6098]  // Approximate coordinates for 2800 Victory Boulevard
+        "type": "Point"
       },
       "properties": {
+        "service": "Child Care",
         "name": "The Children’s Center",
         "address": "2R-104, 2800 Victory Boulevard, Staten Island, NY 10314",
         "phone": "718-982-3190",
@@ -106,10 +106,10 @@ const FeatureCollection = [
     {
       "type": "Feature",
       "geometry": {
-        "type": "Point",
-        "coordinates": [-73.9815, 40.7444]  // Approximate coordinates for 365 Fifth Avenue
+        "type": "Point"
       },
       "properties": {
+        "service": "Child Care",
         "name": "The Child Development and Learning Center",
         "address": "Suite 3201, 365 Fifth Avenue, New York, NY 10016",
         "phone": "212-817-7033",
@@ -126,10 +126,10 @@ const FeatureCollection = [
     {
       "type": "Feature",
       "geometry": {
-        "type": "Point",
-        "coordinates": [-73.9265, 40.8273]  // Approximate coordinates for 475 Grand Concourse
+        "type": "Point"
       },
       "properties": {
+        "service": "Child Care",
         "name": "Children’s Center",
         "address": "475 Grand Concourse, Bronx, NY 10451",
         "phone": "718-518-4176",
@@ -146,10 +146,10 @@ const FeatureCollection = [
     {
       "type": "Feature",
       "geometry": {
-        "type": "Point",
-        "coordinates": [-73.9606, 40.7640]  // Approximate coordinates for 695 Park Avenue
+        "type": "Point"
       },
       "properties": {
+        "service": "Child Care",
         "name": "The Children’s Learning Center",
         "address": "Room 207N, 695 Park Avenue, New York, NY 10065",
         "phone": "212-772-4066",
@@ -166,10 +166,10 @@ const FeatureCollection = [
     {
       "type": "Feature",
       "geometry": {
-        "type": "Point",
-        "coordinates": [-73.9924, 40.7677]  // Approximate coordinates for 860 11th Avenue
+        "type": "Point"
       },
       "properties": {
+        "service": "Child Care",
         "name": "Children’s Center",
         "address": "860 11th Avenue, New York, NY 10019",
         "phone": "212-393-6438",
@@ -186,10 +186,10 @@ const FeatureCollection = [
     {
       "type": "Feature",
       "geometry": {
-        "type": "Point",
-        "coordinates": [-73.9523, 40.5745]  // Approximate coordinates for 2001 Oriental Blvd
+        "type": "Point"
       },
       "properties": {
+        "service": "Child Care",
         "name": "Child Development Center",
         "address": "Room V105, 2001 Oriental Blvd, Brooklyn, NY 11235",
         "phone": "718-368-5439",
@@ -206,10 +206,10 @@ const FeatureCollection = [
     {
       "type": "Feature",
       "geometry": {
-        "type": "Point",
-        "coordinates": [-73.9282, 40.7479]  // Approximate coordinates for 31-10 Thomson Avenue
+        "type": "Point"
       },
       "properties": {
+        "service": "Child Care",
         "name": "Early Childhood Learning Center Programs",
         "address": "Room MB09, 31-10 Thomson Avenue, Long Island City, NY 11101",
         "phone": "718-482-5295",
@@ -227,10 +227,10 @@ const FeatureCollection = [
     {
       "type": "Feature",
       "geometry": {
-        "type": "Point",
-        "coordinates": [-73.8872, 40.8654]  // Approximate coordinates for 2870 Goulden Avenue
+        "type": "Point"
       },
       "properties": {
+        "service": "Child Care",
         "name": "Child Care Center",
         "address": "2870 Goulden Avenue, Bronx, NY 10468",
         "phone": "718-960-7436",
@@ -247,10 +247,10 @@ const FeatureCollection = [
     {
       "type": "Feature",
       "geometry": {
-        "type": "Point",
-        "coordinates": [-73.9467, 40.6624]  // Approximate coordinates for 1150 Carroll Street
+        "type": "Point"
       },
       "properties": {
+        "service": "Child Care",
         "name": "Child Development Center",
         "address": "Room C103, 1150 Carroll Street, Brooklyn, NY 11225",
         "phone": "718-270-6018",
@@ -267,10 +267,10 @@ const FeatureCollection = [
     {
       "type": "Feature",
       "geometry": {
-        "type": "Point",
-        "coordinates": [-73.9897, 40.6948]  // Approximate coordinates for 300 Jay Street
+        "type": "Point"
       },
       "properties": {
+        "service": "Child Care",
         "name": "Child Care Center",
         "address": "Room G-309 and Room NG14, 300 Jay Street, Brooklyn, NY 11201",
         "phone": "718-260-5192",
@@ -287,10 +287,10 @@ const FeatureCollection = [
     {
       "type": "Feature",
       "geometry": {
-        "type": "Point",
-        "coordinates": [-73.9560, 40.8217]  // Approximate coordinates for 119 Convent Avenue
+        "type": "Point"
       },
       "properties": {
+        "service": "Child Care",
         "name": "Campus Child Development Center",
         "address": "Schiff House, 119 Convent Avenue, New York, NY 10031",
         "phone": "212-650-7679",
@@ -307,10 +307,10 @@ const FeatureCollection = [
     {
       "type": "Feature",
       "geometry": {
-        "type": "Point",
-        "coordinates": [-73.8196, 40.7364]  // Approximate coordinates for 65-30 Kissena Blvd
+        "type": "Point"
       },
       "properties": {
+        "service": "Child Care",
         "name": "Child Development Center",
         "address": "Room 245, Kiely Hall, 65-30 Kissena Blvd, Flushing, NY 11367",
         "phone": "718-997-5885",
@@ -327,10 +327,10 @@ const FeatureCollection = [
     {
       "type": "Feature",
       "geometry": {
-        "type": "Point",
-        "coordinates": [-73.8037, 40.7082]  // Approximate coordinates for 94-12 160th Street
+        "type": "Point"
       },
       "properties": {
+        "service": "Child Care",
         "name": "York College Child and Family Center, Inc.",
         "address": "94-12 160th Street, Jamaica, New York 11451",
         "phone": "718-262-2930",
