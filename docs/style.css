@@ -5,9 +5,9 @@
     --SlateBlue: #6a5acd;
   }
 
-body {
-    /* background-color: LightGray; */
-}
+/* body {
+    background-color: LightGray;
+} */
   
 /* Style for the buttons with checkboxes */
 .checkbox-button {
@@ -24,10 +24,10 @@ body {
 }
 
 /* Colors for the buttons */
-.checkbox-button.red { background-color: Violet; }
-.checkbox-button.blue { background-color: DodgerBlue; }
-.checkbox-button.green { background-color: MediumSeaGreen; }
-.checkbox-button.yellow { background-color: SlateBlue; }
+.checkbox-button.red { background-color: var(--Violet); }
+.checkbox-button.blue { background-color: var(--DodgerBlue); }
+.checkbox-button.green { background-color: var(--MediumSeaGreen); }
+.checkbox-button.yellow { background-color: var(--SlateBlue); }
 .checkbox-button.pink { background-color: Pink; }
 
 /* Style the checkbox */

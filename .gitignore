@@ -2,4 +2,4 @@
 .DS_Store
 
 # API Keys
-/src/config.js
+/docs/config.js
