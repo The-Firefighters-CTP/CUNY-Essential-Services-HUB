@@ -3,3 +3,7 @@
 
 # API Keys
 /docs/config.js
+
+*/.env
+
+server/node_modules/
