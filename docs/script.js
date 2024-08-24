@@ -20,7 +20,7 @@ const icons = {
 const script = document.createElement('script');
 // --!> ADD YOUR GOOGLE MAPS API KEY HERE <!--
 // const GOOGLE_MAPS_API_KEY = "";
-script.src = `https://maps.googleapis.com/maps/api/js?key=${config.GOOGLE_MAPS_API_KEY}`;
+script.src = `https://maps.googleapis.com/maps/api/js?key=${config.GOOGLE_MAPS_API_KEY || GOOGLE_MAPS_API_KEY}`;
 script.async = true;
 script.defer = true;
 
