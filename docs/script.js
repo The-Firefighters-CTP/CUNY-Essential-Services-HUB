@@ -166,7 +166,7 @@ function addMarker(map, location, featureProperties) {
             if (!value) continue;
 
             if (key == "name") {
-                contentString += `<p><strong>${capitalizeFirstLetter(key)}</strong>: <u>${value}</u></p>`;
+                contentString += `<p><strong>${capitalizeFirstLetter(key)}</strong>: <strong>${value}</strong></p>`;
             } else if (key === "email") {
                 contentString += `<p><strong>${capitalizeFirstLetter(key)}:</strong> <a href="mailto:${value}">${value}</a></p>`;
             } else if (key === "phone") {
