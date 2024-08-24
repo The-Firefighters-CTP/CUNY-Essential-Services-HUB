@@ -7,6 +7,7 @@ let markers = {
     All: []
 };
 
+// Custom icons for markers
 const icons = {
     FoodPantry: './images/pin_violet.png',
     HealthCare: './images/pin_dodgerblue.png',
@@ -17,14 +18,16 @@ const icons = {
 
 // Load the Google Maps API using the API key from the config file
 const script = document.createElement('script');
+// --!> ADD YOUR GOOGLE MAPS API KEY HERE <!--
+// const GOOGLE_MAPS_API_KEY = "";
 script.src = `https://maps.googleapis.com/maps/api/js?key=${config.GOOGLE_MAPS_API_KEY}`;
 script.async = true;
 script.defer = true;
 
 script.onload = () => {
-    // Initial map load without any markers
+    // Initial map without any markers
     const map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 10,
+        zoom: 10.5,
         center: { lat: 40.7127753, lng: -74.0059728 }
     });
 
@@ -80,41 +83,38 @@ script.onload = () => {
     const check5 = document.getElementById('check5');
     
     check5.addEventListener('change', function () {
-        // Handle "Select All" separately
-        if (this.checked) {
-            // initMap(AllFeatures, 'All', map);
-            initMapAll(check1, check2, check3, check4);
+        // Handle "Select All"
+        if (this.checked) {;
+            initMapAll(check1, check2, check3, check4, map);
         } else {
-            // clearMarkers('All');
             clearAll(check1, check2, check3, check4);
         }
     });
 };
 
-function initMapAll(check1, check2, check3, check4) {
-    check1.checked = true;
-    check2.checked = true;
-    check3.checked = true;
-    check4.checked = true;
-    initMap(HealthCareFeatures, 'HealthCare', map);
-    initMap(FoodPantryFeaturesFeatures, 'FoodPantry', map);
-    initMap(MentalHealthFeatures, 'MentalHealth', map);
-    initMap(ChildCareFeatures, 'ChildCare', map);
-}
-
-function clearAll(check1, check2, check3, check4) {
-    clearMarkers('HealthCare');
-    check1.checked = false;
-    clearMarkers('FoodPantry');
-    check2.checked = false;
-    clearMarkers('MentalHealth');
-    check3.checked = false;
-    clearMarkers('ChildCare');
-    check4.checked = false;
-}
-
+// Add Google Maps to index.html
 document.head.appendChild(script);
 
+// Initialize map for specific features
+async function initMap(FeatureCollection, collectionKey, map) {
+    // Clear existing markers for this feature collection
+    clearMarkers(collectionKey);
+
+    // Iterate through all features in a collection
+    for (const feature of FeatureCollection) {
+        const address = feature.properties.address;
+        try {
+            const location = await geocodeAddress(address);
+            const marker = addMarker(map, location, feature.properties);
+            // Store the marker in the appropriate array for tracking
+            markers[collectionKey].push(marker);
+        } catch (error) {
+            console.error(error);
+        }
+    }
+}
+
+// Convert feature address to coordinates using 'Geocoding' API
 async function geocodeAddress(address) {
     const geocoder = new google.maps.Geocoder();
     return new Promise((resolve, reject) => {
@@ -128,23 +128,7 @@ async function geocodeAddress(address) {
     });
 }
 
-async function initMap(FeatureCollection, collectionKey, map) {
-    // Clear existing markers for this feature collection
-    clearMarkers(collectionKey);
-
-    for (const feature of FeatureCollection) {
-        const address = feature.properties.address;
-        try {
-            const location = await geocodeAddress(address);
-            const marker = addMarker(map, location, feature.properties);
-            // Store the marker in the appropriate array
-            markers[collectionKey].push(marker);
-        } catch (error) {
-            console.error(error);
-        }
-    }
-}
-
+// Add markers for a specific feature collection
 function addMarker(map, location, featureProperties) {
     // Determine the type of service and select the appropriate icon
     let iconUrl;
@@ -157,24 +141,28 @@ function addMarker(map, location, featureProperties) {
     } else if (featureProperties.service === 'Child Care') {
         iconUrl = icons.ChildCare;
     } else {
-        iconUrl = icons.Default; // Use a default icon if type is not recognized
+        iconUrl = icons.Default;
     }
 
+    // Add new marker with custom icon
     const marker = new google.maps.Marker({
         position: location,
         map: map,
         title: featureProperties.name || "Location",
         icon: {
             url: iconUrl,
-            scaledSize: new google.maps.Size(40, 40) // Set the custom size
+            scaledSize: new google.maps.Size(40, 40)
         }
     });
 
+    // Generate content for info window
     let contentString = `<div style="max-width: 200px;">`;
 
     for (let key in featureProperties) {
         if (featureProperties.hasOwnProperty(key)) {
             const value = featureProperties[key];
+
+            // Skip null values
             if (!value) continue;
 
             if (key == "name") {
@@ -191,10 +179,12 @@ function addMarker(map, location, featureProperties) {
 
     contentString += `</div>`;
 
+    // Create info window for the marker
     const infowindow = new google.maps.InfoWindow({
         content: contentString
     });
 
+    // Open info window on click events
     marker.addListener('click', () => {
         infowindow.open(map, marker);
     });
@@ -202,9 +192,7 @@ function addMarker(map, location, featureProperties) {
     return marker;
 }
 
-
-
-// Utility function to clear markers
+// Remove markers for a specific feature collection
 function clearMarkers(collectionKey) {
     if (markers[collectionKey]) {
         markers[collectionKey].forEach(marker => marker.setMap(null));
@@ -212,7 +200,7 @@ function clearMarkers(collectionKey) {
     }
 }
 
-// Function to toggle markers on the map based on checkbox state
+// Toggle markers on the map based on checkbox state
 function toggleMarkers(isChecked, featureCollection, collectionKey, map) {
     if (isChecked) {
         initMap(featureCollection, collectionKey, map);
@@ -221,7 +209,37 @@ function toggleMarkers(isChecked, featureCollection, collectionKey, map) {
     }
 }
 
-// Utility function to capitalize the first letter of a string
+// Add all markers to the map (Select All)
+function initMapAll(check1, check2, check3, check4, map) {
+    check1.checked = true;
+    check2.checked = true;
+    check3.checked = true;
+    check4.checked = true;
+    Promise.all([
+        initMap(HealthCareFeatures, 'HealthCare', map),
+        initMap(FoodPantryFeatures, 'FoodPantry', map),
+        initMap(MentalHealthFeatures, 'MentalHealth', map),
+        initMap(ChildCareFeatures, 'ChildCare', map)
+    ]).then(() => {
+        console.log("All markers loaded");
+    }).catch(error => {
+        console.error("Error loading markers:", error);
+    });
+}
+
+// Remove all markers from the map (Unselect All)
+function clearAll(check1, check2, check3, check4) {
+    clearMarkers('HealthCare');
+    check1.checked = false;
+    clearMarkers('FoodPantry');
+    check2.checked = false;
+    clearMarkers('MentalHealth');
+    check3.checked = false;
+    clearMarkers('ChildCare');
+    check4.checked = false;
+}
+
+// Capitalize the first letter of a string (for content formatting)
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
