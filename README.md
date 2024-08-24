@@ -19,7 +19,7 @@ A hub hosting all essential services CUNY offers with 1-click instant access!
 
 ---
 
-- ### Demo Video: 
+- ### [Demo Video](https://www.youtube.com/watch?v=y6DUAZO9DfU)
 - #### [DevPost](https://devpost.com/software/cuny-essential-services-hub)
 
 ---
